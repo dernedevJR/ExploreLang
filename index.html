@@ -4,4 +4,49 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale = 1.0"
 </head>
+<body>
+   <header>
+      <div class="topBar">
+         <div class="brand">
+            <h1>Explore Lang</h1>
+            <p>Enciclopedia de Linguagens de Progamação</p>
+         </div>
+      </div>
+      <div class="controls">
+         <div class="search-wrap">
+            <label for="busca-input" class="sr-only">Pesquisar Linguagem</label>
+            <input type="search" id="busca-input" placeholder="Pesquisar Linguagem..."
+            autocomplete="off">
+            <button id="botao-busca" title="Buscar"><img alt="Lupa"></button>
+            <ul id="autocomplete" class="autocomplete" aria-label="Sugestões"></ul>
+         </div>
+      </div>
+      <div class="filters">
+         <select id="filtro-do-ano" aria-label="Filtra por ano">
+            <option value="all">Ano (Todos)</option>
+            <option value=">=1995">Até 1995</option>
+            <option value="1996 - 2005">Entre 1996 e 2005</option>
+            <option value="2006 - 2015">Entre 2006 e 2015</option>
+            <option value="=>2016"> 2016 em diante</option>
+         </select>
+
+         <select id="ordenacao">
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+            <option value="mais recente">Mais recente</option>
+            <option value="mais antiga">Mais antiga</option>
+         </select>
+          <button id="trocar-tema" aria-pressed="false" title="Alterna tema"><img src="" alt="lua"></button>
+      </div>
+   </header>
+   <main>
+      <section class="sumary">
+       <div id="stats">Carregando...</div>
+       <div class="fav-preview">Favoritos: <span id="fav-count"></span></div>
+      </section>
+   </main>
+   <footer class="footer">
+      <p>Site criado por <a href="#">DerneJr</a></p>
+   </footer>
+</body>
 </html>
