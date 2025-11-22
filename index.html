@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale = 1.0"
+   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+   <title>Framework Explore</title>
+   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
    <header>
       <div class="topBar">
          <div class="brand">
             <h1>Explore Lang</h1>
-            <p>Enciclopedia de Linguagens de Progamação</p>
+            <p>Pesquise por Linguagens de Progamação</p>
          </div>
       </div>
       <div class="controls">
          <div class="search-wrap">
             <label for="busca-input" class="sr-only">Pesquisar Linguagem</label>
-            <input type="search" id="busca-input" placeholder="Pesquisar Linguagem..."
-            autocomplete="off">
-            <button id="botao-busca" title="Buscar"><img alt="Lupa"></button>
+            <input type="search" id="busca-input" placeholder="Pesquisar Linguagem" autocomplete="off">
+            <button id="botao-busca" title="Buscar"><img src="imagens/lupa.png" id="lupa" alt="Lupa"></img></button>
             <ul id="autocomplete" class="autocomplete" aria-label="Sugestões"></ul>
          </div>
       </div>
@@ -36,17 +40,27 @@
             <option value="mais recente">Mais recente</option>
             <option value="mais antiga">Mais antiga</option>
          </select>
-          <button id="trocar-tema" aria-pressed="false" title="Alterna tema"><img src="" alt="lua"></button>
+         <button id="trocar-tema" aria-pressed="false" title="Alterna tema"><img src="" alt="lua"></button>
       </div>
    </header>
    <main>
       <section class="sumary">
-       <div id="stats">Carregando...</div>
-       <div class="fav-preview">Favoritos: <span id="fav-count"></span></div>
+         <div id="stats">Carregando...</div>
+         <div class="fav-preview">Favoritos: <span id="fav-count"></span></div>
       </section>
    </main>
    <footer class="footer">
       <p>Site criado por <a href="#">DerneJr</a></p>
    </footer>
+   <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+         <button id="modal-close" class="modal-close" aria-label="Fechar">X</button>
+         <h2 id="modal-title"></h2>
+         <p id="modal-desc"></p>
+         <ul id="modal-meta"></ul>
+         <a id="modal-link" href="#" target="_blank" rel="noopener">Acessar documentação</a>
+      </div>
+   </div>
 </body>
+
 </html>

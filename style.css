@@ -1,0 +1,121 @@
+:root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --muted:#94a3b8;
+    --accent:#5eead4;
+    --text:#e6eef8;
+    --radius:#12px;
+    --shadow: 0 10px 30px rgba(2,6,23,.6);
+}
+:root.light{
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --muted:#475569;
+    --accent:#0ea5a4;
+    --text:#0b1220;
+}
+
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family: Inter,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:var(--bg);
+    color:var(--text);
+}
+.app{max-width: 1100px; margin:0 auto;}
+
+/* TOPBAR */
+.topBar{
+     display: flex;
+     justify-content: space-between;
+     align-items:center;
+     gap:12px;
+     padding: 14px;
+     background:rgba(255,255,255,0.02);
+     border-radius: 10px; 
+    }
+
+.brand h1{
+    margin:0;
+    font-size:20px;
+}
+
+.controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.search-wrap{
+    position: relative;
+}
+
+#busca-input{
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+    background: transparent;
+    color: var(--text);
+}
+
+#botao-busca{
+    position:absolute;
+    right: 6px;
+    top: 6px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor:pointer;
+}
+#lupa{
+   height: 20px;
+}
+
+/* CARD GRID */
+.card-container{
+    display: grid;
+    gap: 12px;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    margin-top: 16px;
+}
+
+.card{
+    background-color: var(--card);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, box-shadow .15s;
+}
+.card:hover{
+    transform: translateY(-6px);
+}
+
+/* MODAL */
+.modal{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s;
+}
+
+.modal[aria-hidden = 'false']{
+    opacity: 1; 
+    pointer-events: auto;
+}
+
+.modal-content {
+    width: min(720px, 95%);
+    background: var(--card);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* SMALL */
